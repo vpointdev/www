@@ -1,38 +1,105 @@
 {
   "name": "vanishingpoint.dev",
-  "version": "0.0.0",
+  "description": "Vanishing Point Website (https://vanishingpoint.dev)",
+  "icon": "",
+  "apiDocs": "",
+  "readme": "",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "main": "app/main.ts",
+  "qna": "",
+  "support": "",
+  "privacy": "",
+  "terms": "",
+  "docs": "",
+  "release": {
+    "version": "",
+    "date": ""
+  },
+  "version": "0.0.1",
+  "author": {
+    "name": "Pablo Barquero",
+    "email": "vanishingpoint.dev@gmail.com",
+    "url": "https://vanishingpoint.dev"
+  },
+  "license": "Apache-2.0",
+  "categories": [
+    "Education",
+    "Programming Languages",
+    "Machine Learning"
+  ],
+  "keywords": [
+    "Angular",
+    "Firebase",
+    "Bootstrap",
+    "FontAwesome",
+    "i18n",
+    "PWA",
+    "VanishingPoint"
+  ],
+  "badges": [
+    {
+      "href": "https://vanishingpoint.dev",
+      "description": "Vanishing Point Website",
+      "name": "vanishingpoint",
+      "url": "https://vanishingpoint.dev"
+    }
+  ],
+  "publisher": "VanishingPoint",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "serve": "npm run build && ng serve",
+    "serve-testing": "npm run build && ng serve --configuration=testing",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "clean": "rm -rf dist/ && rm -rf node_modules/ && npm cache clean --force && rm -f package-lock.json && npm i && npm run build",
+    "build-prod": "ng build --configuration production",
+    "deploy-staging": "npm run build && firebase deploy --only hosting --project default",
+    "deploy-prod": "npm run build-prod && firebase deploy --only hosting --project production"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^16.1.0",
-    "@angular/common": "^16.1.0",
-    "@angular/compiler": "^16.1.0",
-    "@angular/core": "^16.1.0",
-    "@angular/forms": "^16.1.0",
-    "@angular/platform-browser": "^16.1.0",
-    "@angular/platform-browser-dynamic": "^16.1.0",
-    "@angular/router": "^16.1.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.13.0"
+    "@angular/animations": "^16.1.8",
+    "@angular/common": "^16.1.8",
+    "@angular/compiler": "^16.1.8",
+    "@angular/core": "^16.1.8",
+    "@angular/forms": "^16.1.8",
+    "@angular/platform-browser": "^16.1.8",
+    "@angular/platform-browser-dynamic": "^16.1.8",
+    "@angular/router": "^16.1.8",
+    "@angular/service-worker": "^16.1.8",
+    "@fortawesome/angular-fontawesome": "^0.13.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "bootstrap": "^5.3.1",
+    "ngx-bootstrap": "^11.0.2",
+    "rxjs": "~7.8.1",
+    "tslib": "^2.6.1",
+    "zone.js": "~0.13.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.1.8",
     "@angular/cli": "~16.1.8",
-    "@angular/compiler-cli": "^16.1.0",
-    "@types/jasmine": "~4.3.0",
-    "jasmine-core": "~4.6.0",
-    "karma": "~6.4.0",
+    "@angular/compiler-cli": "^16.1.8",
+    "@types/jasmine": "~4.3.5",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.2",
     "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
+    "karma-coverage": "~2.2.1",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.1.3"
+    "typescript": "~5.1.6"
   }
 }
