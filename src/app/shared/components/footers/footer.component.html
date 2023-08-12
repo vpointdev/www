@@ -1,0 +1,65 @@
+<footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+  <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+    <div class="row">
+      <!-- Logo and Info Column -->
+      <div class="col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none navbar-brand"
+          routerLink="/" (click)="scrollToTop()" aria-label="Vanishing Point Logo">
+          <img src="../../assets/logo__white-smoke.png" alt="mdo" width="40" height="40" class="d-block me-2">
+        </a>
+        <span class="fs-5">{{ 'FOOTER.SITE_NAME' | translate }}</span>
+        <ul class="list-unstyled small">
+          <li class="mb-2">
+            <span>{{ 'FOOTER.HUMAN_DESIGNED' | translate }}</span>
+            <a href="https://chat.openai.com">Open AI ChatGPT </a>
+            <span>{{ 'FOOTER.WITH_ASSISTANCE' | translate }}</span>
+            <a href="https://github.com">Copilot GitHub </a>
+            <span>{{ 'FOOTER.IN_ORDER_TO_COMPLETE' | translate }}</span>
+            <a href="https://quillbot.com/">Quillbot </a>
+            <span>{{ 'FOOTER.FOR_PROOFREAD_PROMPTS' | translate }}</span>
+          </li>
+
+          <li class="mb-2">{{ 'FOOTER.CODE_LICENSE' | translate }} <a
+              href="https://github.com/vanishing-point-dev/www/blob/main/LICENSE" target="_blank"
+              rel="license noopener">Apache</a></li>
+          <li class="mb-2">{{ 'FOOTER.CURRENT_VERSION' | translate }}</li>
+        </ul>
+      </div>
+
+      <!-- Links Column -->
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5>Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a routerLink="/privacy-policy" (click)="scrollToTop()">Privacy Policy</a></li>
+          <li class="mb-2"><a routerLink="/terms-and-conditions" (click)="scrollToTop()">Terms and Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- Guides Column -->
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Guides</h5>
+        <ul class="list-unstyled">
+        </ul>
+      </div>
+
+      <!-- Projects Column -->
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Projects</h5>
+        <ul class="list-unstyled">
+
+        </ul>
+      </div>
+
+      <!-- Community Column -->
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Community</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <button class="btn" (click)="openIssuesPage()">Issues</button>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</footer>

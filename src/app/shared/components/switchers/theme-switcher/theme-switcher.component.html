@@ -1,0 +1,7 @@
+<div class="theme-switcher">
+  <!-- Toggle Theme Button with Animation -->
+  <button (click)="toggleTheme()" class="btn text-white py-2 px-0 px-lg-2" [@buttonClick]="buttonState">
+    <!-- Icon representing the current theme -->
+    <fa-icon [icon]="isDarkTheme ? faMoon : faSun" class="icon-lg icon-white"></fa-icon>
+  </button>
+</div>

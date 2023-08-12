@@ -1,0 +1,37 @@
+{
+  "HEADER.ABOUT": "Acerca de",
+  "HEADER.SERVICES": "Servicios",
+  "HEADER.PORTFOLIO": "Portafolio",
+  "HEADER.HOWTOS": "Cómo hacer",
+  "FOOTER.SITE_NAME": "vanishingpoint.dev",
+  "FOOTER.HUMAN_DESIGNED": "Diseñado y orquestado por humanos, con la asistencia de ",
+  "FOOTER.WITH_ASSISTANCE": "para una rápida ingeniería, ",
+  "FOOTER.IN_ORDER_TO_COMPLETE": "para completar el código, ",
+  "FOOTER.FOR_PROOFREAD_PROMPTS": "para revisión de indicaciones y derechos de autor.",
+  "FOOTER.CODE_LICENSE": "Código licenciado",
+  "FOOTER.CURRENT_VERSION": "Actualmente v0.0.2",
+  "PRIVACY_POLICY": {
+    "TITLE": "Política de Privacidad",
+    "LAST_UPDATED": "Última actualización",
+    "INTRODUCTION_1": "Esta Política de Privacidad describe nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de su información cuando utiliza el Servicio y le informa sobre sus derechos de privacidad y cómo la ley lo protege.",
+    "INTRODUCTION_2": "Utilizamos sus datos personales para proporcionar y mejorar el Servicio. Al utilizar el Servicio, usted acepta la recopilación y el uso de la información de acuerdo con esta Política de Privacidad.",
+    "INTERPRETATION_DEFINITIONS": "Interpretación y Definiciones",
+    "INTERPRETATION": "Interpretación",
+    "INTERPRETATION_DESC": "Las palabras cuya letra inicial está en mayúscula tienen significados definidos en las siguientes condiciones. Las siguientes definiciones tendrán el mismo significado independientemente de si aparecen en singular o en plural.",
+    "DEFINITIONS": "Definiciones",
+    "DEFINITIONS_DESC": "Para los propósitos de esta Política de Privacidad:",
+    "ACCOUNT": "Cuenta",
+    "ACCOUNT_DESC": "significa una cuenta única creada para que usted acceda a nuestro Servicio o partes de nuestro Servicio.",
+    "AFFILIATE": "Afiliado",
+    "AFFILIATE_DESC": "significa una entidad que controla, es controlada por o está bajo el control común de una parte, donde \"control\" significa la propiedad del 50% o más de las acciones, intereses de capital u otros valores con derecho a voto para la elección de directores u otra autoridad de gestión.",
+    "TYPES_OF_DATA_COLLECTED": "Tipos de Datos Recopilados",
+    "PERSONAL_DATA": "Datos Personales",
+    "PERSONAL_DATA_DESC": "Mientras utiliza nuestro Servicio, es posible que le solicitemos que nos proporcione cierta información de identificación personal que se puede utilizar para contactarlo o identificarlo. La información de identificación personal puede incluir, entre otras cosas:",
+    "EMAIL_ADDRESS": "Dirección de correo electrónico",
+    "FIRST_LAST_NAME": "Nombre y apellido",
+    "USAGE_DATA": "Datos de Uso",
+    "USAGE_DATA_DESC": "Los Datos de Uso se recopilan automáticamente al utilizar el Servicio.",
+    "COLLECTING_USING_PERSONAL_DATA": "Recopilación y Uso de Sus Datos Personales"
+
+  }
+}

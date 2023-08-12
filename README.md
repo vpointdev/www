@@ -1,10 +1,10 @@
-# Vanishing Point
+# About
 
-## Description
+Pablo Barquero here, senior software engineer and solutions consultant. This website offers a collection of information accumulated over the years, with a focus on being supported with the construction, testing, and rewriting of programs using ChatGPT OpenAI.
 
-Our services span across various domains, including advanced AI-powered web and mobile development, cloud computing, cybersecurity, data analytics, and much more. We collaborate with clients across industries to craft customized solutions that meet their unique needs and drive growth.
+## WWW
 
-Our commitment to excellence is unwavering. We stay at the forefront of technology trends, constantly upgrading our skills and adopting the latest tools and methodologies. This allows us to deliver solutions that are not only state-of-the-art but also scalable and future-proof.
+This codebase will be my foundation for displaying the projects for which I have created a solution.
 
 ## Folder Structure
 
@@ -33,33 +33,49 @@ The workspace contains two folders by default, where:
 ### Source Code Folder Structure
 
 ```
-app
-|- core
-|  |- guards
-|  |- interceptors
-|  |- services
-|  |- validators
-|
-|- layout
-|  |- components
-|  |- directives
-|  |- pipes
-|
-|- modules
-|  |- feature1
-|
-|- shared
-   |- components
-   |- directives
-   |- pipes
+|- src
+| |- app
+| | |- core
+| | | |- guards
+| | | |- interceptors
+| | | |- services
+| | | | |- theme
+| | | |- validators
+| | |- layout
+| | | |- components
+| | | |- directives
+| | | |- pipes
+| | |- shared
+| | | |- components
+| | | | |- carrousels
+| | | | | |- marketing-carousel
+| | | | |- footers
+| | | | |- headers
+| | | | |- navbars
+| | | | | |- navbar-menu-options
+| | | | |- switchers
+| | | | | |- language-switcher
+| | | | | |- theme-switcher
+| | | |- directives
+| | | |- pipes
+|- .gitignore`: the file to maintain git configuration
+|- angular.json`: the file to maintain angular configuration
+|- firebase.json`: the file to maintain firebase configuration
+|- LICENSE`: the file to maintain project license
+|- ngsw-config.json`: the file to maintain service worker configuration
+|- package-lock.json`: the file to maintain npm dependencies
+|- package.json`: the file to maintain npm dependencies
+|- README.md`: the file to maintain project documentation
+|- tsconfig.app.json`: the file to maintain typescript configuration
+|- tsconfig.json`: the file to maintain typescript configuration
+|- tsconfig.spec.json`: the file to maintain typescript configuration
 ```
 
-`core`: Contains global application features like guards, interceptors, services, and validators that are used throughout the application.
-`layout`: Contains reusable UI components, directives, and pipes that are used in different parts of the application.
-`modules`: Contains feature modules that group related components, pages, and services together. Each feature module has its own routing module and exports the components, directives, and pipes that it defines.
-`shared`: Contains shared UI components, directives, and pipes that are used in different feature modules.
+- `core`: Contains global application features like guards, interceptors, services, and validators that are used throughout the application.
+- `layout`: Contains reusable UI components, directives, and pipes that are used in different parts of the application.
+- `shared`: Contains shared UI components, directives, and pipes that are used in different feature modules.
 
-## Angular App Run, Lint, Test, and Deployment Guide
+## First time Deployment Guide
 
 This guide will walk through the process of running, inspecting, testing, and deploying an Angular application to Firebase hosting.
 
@@ -81,7 +97,7 @@ This guide will walk through the process of running, inspecting, testing, and de
 },
 ```
 
-### First time setup
+### Git init
 
 - Clone the repository from GitLab.
 - Navigate to the project directory.
@@ -94,13 +110,13 @@ cd [repository-name]
 npm i
 ```
 
-### Adding Plugins
+## Plugins used in the app
 
-#### FontAwesome
+### FontAwesome
 
 [https://fontawesome.com/icons](https://fontawesome.com/icons)
 
-- Install Font Awesome Package
+Install Font Awesome Package
 
 ```
 npm i @fortawesome/fontawesome-svg-core
@@ -110,7 +126,7 @@ npm i @fortawesome/free-brands-svg-icons
 npm install @fortawesome/free-regular-svg-icons
 ```
 
-- Open `app.module.ts
+Open `app.module.ts
 
 ```
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -120,7 +136,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 ```
 
-- Usage
+Usage
 
 ```
 <fa-icon icon="dot-circle" class="far"></fa-icon>
@@ -130,21 +146,21 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 
 #### Add PWA Support
 
-- Run the command
+Run the command
 
 ```
 ng add @angular/pwa
 ```
 
-#### Add Bootstrap 5
+### Add Bootstrap 5
 
-- Install Bootstrap
+Install Bootstrap
 
 ```
 npm install bootstrap
 ```
 
-- Import Bootstrap Styles
+Import Bootstrap Styles
 
 ```
 /* src/styles.scss */
@@ -154,16 +170,28 @@ npm install bootstrap
 ### Add NGX Bootstrap
 
 Install Angular Bootstrap
+
 ```
 npm install ngx-bootstrap
 ```
+
 Open `app.module.ts` import the necessary modules for the Carousel
+
 ```
 import { CarouselModule } from 'ngx-bootstrap/carousel'; // Import the CarouselModule
 imports: [BrowserModule, CarouselModule.forRoot()], // Add CarouselModule here
 ```
 
-#### Update package.json project dependencies
+### Add Fav Icon Generator
+
+Install `cli-real-favicon`:
+
+```
+npm install -g cli-real-favicon
+real-favicon generate faviconDescription.json faviconData.json outputDir
+```
+
+## Update package.json project dependencies
 
 Updating Dependencies with npm-check-updates
 The npm-check-updates package allows you to easily update your project's dependencies to their latest available versions.
@@ -175,7 +203,7 @@ ncu -u
 npm install
 ```
 
-### Run, Test, Build  & deploy Scripts
+## Run, Test, Build & deploy Scripts
 
 ```
 "scripts": {
@@ -192,7 +220,7 @@ npm install
   },
 ```
 
-- Run the following npm commands to run, build, test or deploy the app
+Run the following npm commands to run, build, test or deploy the app
 
 ```
 
@@ -200,8 +228,15 @@ npm run [script name]
 
 ```
 
-#### Tips to improve prod bundle 
-- Run the source-map-explorer to analyze the bundle:
+## Tips to improve prod bundle
+
+### Follow semantic versioning
+
+<https://docs.npmjs.com/about-semantic-versioning>
+
+### Analyze bundle
+
+Run the source-map-explorer to analyze the bundle:
 
 ```
 npx source-map-explorer dist/[your-app-name]/main.*.js
@@ -248,16 +283,14 @@ firebase deploy
 
 ```
 
-### Setting up, testing, and deploying Firebase hosting
+## Setting up, testing, and deploying Firebase hosting
 
 Firebase Hosting is a fast and secure way to serve static and dynamic content to your users. In this section, we will go through the steps to set up, test, and deploy Firebase hosting for the GeaNext Angular application.
-
-### Prerequisites
 
 - Node.js and NPM (Node Package Manager) installed.
 - Firebase CLI installed.
 
-### Setting up Firebase Hosting
+## Setting up Firebase Hosting
 
 - Navigate to the project directory.
 - Install dependencies.
@@ -295,7 +328,7 @@ firebase deploy --only hosting
 
 ```
 
-### Setting up Firebase Emulators
+## Setting up Firebase Emulators
 
 - Navigate to the project directory.
 - Install dependencies.

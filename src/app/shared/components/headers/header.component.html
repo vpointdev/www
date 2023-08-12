@@ -1,0 +1,56 @@
+<header class="navbar navbar-expand-lg bd-navbar sticky-top">
+  <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+    <!-- Brand Logo -->
+    <a class="navbar-brand p-0 me-0 me-lg-2" routerLink="/" aria-label="Vanishing Point Dev" (click)="scrollToTop()">
+      <img src="../../assets/logo__white-smoke.png" alt="mdo" width="64" height="64">
+    </a>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar"
+      aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
+      <div class="offcanvas-header px-4 pb-0">
+        <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Vanishing Point Dev</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"
+          data-bs-target="#bdNavbar"></button>
+      </div>
+      <div class="offcanvas-body p-4 pt-0 p-lg-0">
+        <hr class="d-lg-none text-white-50">
+        
+        <!-- Navigation Menu Options -->
+        <app-navbar-menu-options></app-navbar-menu-options>
+
+        <!-- Social Media Links -->
+        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+          <li class="nav-item col-6 col-lg-auto px-1">
+            <button class="btn text-white py-2 px-0 px-lg-2" type="button"
+              (click)="openLink('https://github.com/vanishing-point-dev')">
+              <fa-icon [icon]="faGithub" class="fab fa-lg"></fa-icon>
+              <small class="d-lg-none ms-2">GitHub</small>
+            </button>
+          </li>
+          <li class="nav-item col-6 col-lg-auto px-1">
+            <button class="btn text-white py-2 px-0 px-lg-2" type="button"
+              (click)="openLink('https://twitter.com/vpointdev')">
+              <fa-icon [icon]="faTwitter" class="fab fa-lg"></fa-icon>
+              <small class="d-lg-none ms-2">Twitter</small>
+            </button>
+          </li>
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+          
+          <!-- Theme Switcher -->
+          <li class="nav-item col-6 col-lg-auto px-1">
+            <app-theme-switcher></app-theme-switcher>
+          </li>
+          
+          <!-- Language Switcher -->
+          <li class="nav-item col-6 col-lg-auto px-1">
+            <app-language-switcher></app-language-switcher>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

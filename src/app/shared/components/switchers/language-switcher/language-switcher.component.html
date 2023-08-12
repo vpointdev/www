@@ -1,0 +1,5 @@
+<!-- Language switcher button -->
+<button class="btn text-white py-2 px-0 px-lg-2" type="button" (click)="toggleLanguage()" [@buttonClick]="buttonState">
+  <!-- Language icon based on current language -->
+  <img [src]="currentLanguageIconSrc" alt="Language Icon" class="language-icon rounded">
+</button>

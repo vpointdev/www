@@ -1,0 +1,23 @@
+.bd-footer .navbar-brand {
+  color: whitesmoke;
+  transition: transform 0.2s ease-in-out
+}
+.bd-footer a {
+  color: var(--bs-body-color);
+  text-decoration: none
+}
+
+.bd-footer a:hover,.bd-footer a:focus {
+  color: var(--bs-link-hover-color);
+  text-decoration: underline
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bd-footer .navbar-brand {
+      transition: none
+  }
+}
+
+.bd-footer .navbar-brand:hover {
+  transform: rotate(-5deg) scale(1.1)
+}

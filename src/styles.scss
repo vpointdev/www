@@ -1,3 +1,36 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+/* Define the colors as CSS variables */
+/* Override Bootstrap variables with your custom colors */
+$primary: #673AB7; /* Royal Purple */
+$secondary: #191970; /* Midnight Blue */
+$success: #00C853; /* Success Color */
+$info: #03A9F4; /* Electric Blue */
+$warning: #FFC107; /* Warning Color */
+$danger: #FF4081; /* Vivid Pink */
+$light: #F5F5F5; /* White Smoke */
+$dark: #333333; /* Charcoal */
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning":$warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  // Add more color customizations here if needed
+);
 /* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "node_modules/bootstrap/scss/bootstrap";
+
 // Your custom styles go below this line
+:root {
+  --bd-violet-rgb: 103, 58, 183; /* Adjust the RGB values as needed */
+  --gradient-start: rgba(var(--bd-violet-rgb), 1);
+  --gradient-end: rgba(var(--bd-violet-rgb), 0.95);
+
+  --bd-midnight-blue-rgb: 25, 25, 112; /* Adjust the RGB values as needed */
+  --gradient-start: rgba(var(--bd-midnight-blue-rgb), 1);
+  --gradient-end: rgba(var(--bd-midnight-blue-rgb), 0.95);}
