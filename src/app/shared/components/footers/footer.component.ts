@@ -1,15 +1,36 @@
-import { Component } from '@angular/core';
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { ThemeService } from 'src/app/core/services/theme/theme.service';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent {
-  // Font Awesome icons
+export class FooterComponent  implements OnInit, OnDestroy{
   faGithub = faGithub;
-  faTwitter = faTwitter;
+  isDarkTheme: boolean = false;
+  private themeChangeSubscription: Subscription | undefined;
+
+  constructor(private themeService: ThemeService) {}
+
+  ngOnInit(): void {
+    this.checkTheme();
+    this.themeChangeSubscription = this.themeService.themeChanged.subscribe((theme: string) => {
+      this.isDarkTheme = theme === 'dark';
+    });
+  }
+
+  private checkTheme(): void {
+    const currentTheme = this.themeService.getStoredTheme();
+    console.log(currentTheme);
+    if (currentTheme) {
+      this.isDarkTheme = currentTheme === 'dark';
+    } else {
+      this.isDarkTheme = this.themeService.getPreferredTheme() === 'dark';
+    }
+  }
 
   /**
    * Scrolls to the top of the page with smooth behavior.
@@ -19,9 +40,17 @@ export class FooterComponent {
   }
 
   /**
-   * Opens the GitHub issues page in a new tab.
+   * Opens external links in a new tab.
+   * @param url The URL to open in a new tab.
    */
-  openIssuesPage() {
-    window.open('https://github.com/vanishing-point-dev/www/issues', '_blank');
+  openExternalLink(url: string): void {
+    window.open(url, '_blank');
+  }
+
+  ngOnDestroy(): void {
+    // Always good practice to unsubscribe when the component is destroyed
+    if (this.themeChangeSubscription) {
+      this.themeChangeSubscription.unsubscribe();
+    }
   }
 }

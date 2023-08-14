@@ -1,21 +1,25 @@
-<ul class="navbar-nav flex-row flex-wrap">
+<ul class="navbar-nav flex-row flex-wrap" aria-label="Main navigation">
   <li class="nav-item col-6 col-lg-auto px-1">
-    <button class="btn text-white py-2 px-0 px-lg-2" type="button" (click)="openPage('About')">
+    <button class="btn text-white py-2 px-0 px-lg-2" type="button" (click)="openPage('About')"
+      aria-label="Navigate to About page">
       {{ 'HEADER.ABOUT' | translate }}
     </button>
   </li>
   <li class="nav-item col-6 col-lg-auto px-1">
-    <button class="btn text-white py-2 px-0 px-lg-2" type="button" (click)="openPage('Services')">
+    <button class="btn text-white py-2 px-0 px-lg-2" type="button" (click)="openPage('Services')"
+      aria-label="Navigate to Services page">
       {{ 'HEADER.SERVICES' | translate }}
     </button>
   </li>
   <li class="nav-item col-6 col-lg-auto px-1">
-    <button class="btn text-white py-2 px-0 px-lg-2" type="button" (click)="openPage('Portfolio')">
+    <button class="btn text-white py-2 px-0 px-lg-2" type="button" (click)="openPage('Portfolio')"
+      aria-label="Navigate to Portfolio page">
       {{ 'HEADER.PORTFOLIO' | translate }}
     </button>
   </li>
   <li class="nav-item col-6 col-lg-auto px-1">
-    <button class="btn text-white py-2 px-0 px-lg-2" type="button" (click)="openPage('HowTos')">
+    <button class="btn text-white py-2 px-0 px-lg-2" type="button" (click)="openPage('HowTos')"
+      aria-label="Navigate to How-Tos page">
       {{ 'HEADER.HOWTOS' | translate }}
     </button>
   </li>

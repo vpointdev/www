@@ -42,5 +42,6 @@ export class ThemeSwitcherComponent implements OnInit {
     // Update the stored theme and apply the new theme
     this.themeService.setStoredTheme(theme);
     this.themeService.setTheme(theme);
+    this.themeService.themeChanged.emit(theme);
   }
 }

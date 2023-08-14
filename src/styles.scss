@@ -33,4 +33,10 @@ $theme-colors: (
 
   --bd-midnight-blue-rgb: 25, 25, 112; /* Adjust the RGB values as needed */
   --gradient-start: rgba(var(--bd-midnight-blue-rgb), 1);
-  --gradient-end: rgba(var(--bd-midnight-blue-rgb), 0.95);}
+  --gradient-end: rgba(var(--bd-midnight-blue-rgb), 0.95);
+
+  --bd-charcoal-rgb: 51, 51, 51; /* Adjust the RGB values as needed */
+  --gradient-start: rgba(var(--bd-charcoal-rgb), 1);
+  --gradient-end: rgba(var(--bd-charcoal-rgb), 0.80);
+}
+

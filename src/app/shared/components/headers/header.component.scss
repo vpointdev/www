@@ -11,14 +11,14 @@
   z-index: -1;
   display: block;
   content: "";
-  background-image: linear-gradient(rgba(var(--bd-violet-rgb), 1), rgba(var(--bd-violet-rgb), 0.95))
+  background-image: linear-gradient(rgba(var(--bd-charcoal-rgb), 1), rgba(var(--bd-charcoal-rgb), 0.95))
 }
 
 @media (max-width: 991.98px) {
   .bd-navbar .bd-navbar-toggle {
       width:4.25rem
   }
-}a
+}
 
 .bd-navbar .navbar-toggler {
   padding: 0;
@@ -83,3 +83,4 @@
 .bd-navbar .dropdown-toggle:focus:not(:focus-visible) {
   outline: 0
 }
+

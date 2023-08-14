@@ -21,6 +21,8 @@ import { TranslateService } from '@ngx-translate/core';
 export class LanguageSwitcherComponent implements OnInit {
   currentLanguage: string = 'en';
   buttonState: 'active' | 'inactive' = 'inactive';
+  iconWidth: number = 20;
+  iconHeight: number = 20;
 
   constructor(private translateService: TranslateService) {
     this.currentLanguage = translateService.currentLang; // Get the current language
@@ -39,6 +41,6 @@ export class LanguageSwitcherComponent implements OnInit {
 
   // Get the path to the current language icon
   get currentLanguageIconSrc(): string {
-    return this.currentLanguage === 'en' ? 'assets/icons/en.png' : 'assets/icons/es.png';
+    return this.currentLanguage === 'en' ? '/assets/icons/en.png' : '/assets/icons/es.png';
   }
 }

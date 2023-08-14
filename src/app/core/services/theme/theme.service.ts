@@ -1,10 +1,12 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ThemeService {
   private readonly localStorageKey = 'theme';
+  themeChanged = new EventEmitter<string>();
+
 
   /**
    * Get the stored theme from local storage.

@@ -1,7 +1,11 @@
-<div class="theme-switcher">
+<div class="theme-switcher" aria-label="Theme switcher">
+
   <!-- Toggle Theme Button with Animation -->
-  <button (click)="toggleTheme()" class="btn text-white py-2 px-0 px-lg-2" [@buttonClick]="buttonState">
+  <button (click)="toggleTheme()" class="btn text-white py-2 px-0 px-lg-2" [@buttonClick]="buttonState"
+    aria-label="Toggle theme between dark and light modes">
+
     <!-- Icon representing the current theme -->
-    <fa-icon [icon]="isDarkTheme ? faMoon : faSun" class="icon-lg icon-white"></fa-icon>
+    <fa-icon [icon]="isDarkTheme ? faMoon : faSun" class="icon-lg icon-white" aria-hidden="true"></fa-icon>
+
   </button>
 </div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { ThemeService } from 'src/app/core/services/theme/theme.service';
 
 @Component({
@@ -11,6 +11,7 @@ export class HeaderComponent {
   // Font Awesome icons
   faGithub = faGithub;
   faTwitter = faTwitter;
+  faYouTube = faYoutube;
 
   constructor(private themeService: ThemeService) {}
 

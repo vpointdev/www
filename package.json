@@ -13,16 +13,16 @@
     "url": "https://github.com/vanishing-point-dev/www/issues"
   },
   "main": "app/main.ts",
-  "qna": "",
+  "qna": "https://vanishingpoint.dev/questions-and-answers",
   "support": "https://vanishingpoint.dev/contact",
   "privacy": "https://vanishingpoint.dev/privacy-policy",
   "terms": "https://vanishingpoint.dev/terms-and-conditions",
-  "docs": "",
+  "docs": "https://vanishingpoint.dev/docs",
   "release": {
     "version": "",
     "date": ""
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": {
     "name": "Pablo Barquero",
     "email": "pbarquero@vanishingpoint.dev",
@@ -76,6 +76,7 @@
     "@angular/common": "^16.2.0",
     "@angular/compiler": "^16.2.0",
     "@angular/core": "^16.2.0",
+    "@angular/fire": "^7.6.1",
     "@angular/forms": "^16.2.0",
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
@@ -88,7 +89,9 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
+    "@typeform/embed": "^2.16.0",
     "bootstrap": "^5.3.1",
+    "firebase": "^10.1.0",
     "ngx-bootstrap": "^11.0.2",
     "rxjs": "~7.8.1",
     "tslib": "^2.6.1",

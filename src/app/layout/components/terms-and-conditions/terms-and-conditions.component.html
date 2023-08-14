@@ -1,85 +1,121 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-8 mx-auto">
-      <!-- Terms and Conditions Header -->
-      <h1 class="mt-5">Terms and Conditions</h1>
-      <p>Last updated: August 12, 2023</p>
+    <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
+      <h1 class="display-3" aria-label="Terms and Conditions">{{ 'TERMS.TITLE' | translate }}</h1>
+      <small class="text-muted d-block mb-4">{{ 'TERMS.LAST_UPDATED' | translate }}</small>
 
-      <!-- Introduction -->
-      <p>Please read these terms and conditions carefully before using Our Service.</p>
+      <!-- Introduction Paragraph -->
+      <section aria-labelledby="intro-title">
+        <h4 id="intro-title">{{ 'TERMS.INTRO' | translate }}</h4>
+        <p class="lead">{{ 'TERMS.INTRO' | translate }}</p>
+      </section>
 
-      <!-- Interpretation and Definitions -->
-      <h1 class="mt-5">Interpretation and Definitions</h1>
+      <!-- Interpretation and Definitions Section -->
+      <section aria-labelledby="interpretation-title" class="mb-5">
+        <h4 id="interpretation-title">{{ 'TERMS.INTERPRETATION_AND_DEFINITIONS_TITLE' | translate }}</h4>
 
-      <!-- Interpretation -->
-      <h2>Interpretation</h2>
-      <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+        <h5 class=" mt-3">{{ 'TERMS.INTERPRETATION_TITLE' | translate }}</h5>
+        <p>{{ 'TERMS.INTERPRETATION_CONTENT' | translate }}</p>
 
-      <!-- Definitions -->
-      <h2>Definitions</h2>
-      <p>For the purposes of these Terms and Conditions:</p>
-      <ul>
-        <li><strong>Application</strong> means the software program provided by the Company downloaded by You on any electronic device, named Vanishing Point Dev</li>
-        <li><strong>Application Store</strong> means the digital distribution service operated and developed by Apple Inc. (Apple App Store) or Google Inc. (Google Play Store) in which the Application has been downloaded.</li>
-        <!-- Add more definitions here... -->
-      </ul>
+        <h5 class=" mt-3">{{ 'TERMS.DEFINITIONS_TITLE' | translate }}</h5>
+        <p>{{ 'TERMS.DEFINITIONS_INTRO' | translate }}</p>
 
-      <!-- Acknowledgment -->
-      <h1 class="mt-5">Acknowledgment</h1>
-      <p>These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company...</p>
+        <!-- Definitions List -->
+        <ul class="list-group list-group-flush mt-2">
+          <li class="list-group-item"><strong>{{ 'TERMS.DEFINITIONS.APPLICATION' | translate }}</strong></li>
+          <li class="list-group-item"><strong>{{ 'TERMS.DEFINITIONS.APPLICATION_STORE' | translate }}</strong></li>
+          <!-- ... add other list items similarly ... -->
+        </ul>
+      </section>
+      <!-- Acknowledgment Section -->
+      <section aria-labelledby="acknowledgment-title" class="mb-5">
+        <h4 id="acknowledgment-title">{{ 'TERMS.ACKNOWLEDGMENT_TITLE' | translate }}</h4>
+        <p>{{ 'TERMS.ACKNOWLEDGMENT_CONTENT_1' | translate }}</p>
+        <!-- ... add other paragraphs similarly ... -->
+      </section>
 
-      <!-- Links to Other Websites -->
-      <h1 class="mt-5">Links to Other Websites</h1>
-      <p>Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company...</p>
+      <!-- Links to Other Websites Section -->
+      <section aria-labelledby="links-title" class="mb-5">
+        <h4 id="links-title">{{ 'TERMS.LINKS_TITLE' | translate }}</h4>
+        <p>{{ 'TERMS.LINKS_CONTENT_1' | translate }}</p>
+        <p>{{ 'TERMS.LINKS_CONTENT_2' | translate }}</p>
+        <p>{{ 'TERMS.LINKS_CONTENT_3' | translate }}</p>
+      </section>
 
-      <!-- Termination -->
-      <h1 class="mt-5">Termination</h1>
-      <p>We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions...</p>
+      <!-- Termination of Use Section -->
+      <section aria-labelledby="termination-title" class="mb-5">
+        <h4 id="termination-title">{{ 'TERMS.TERMINATION_TITLE' | translate }}</h4>
+        <p>{{ 'TERMS.TERMINATION_CONTENT_1' | translate }}</p>
+        <p>{{ 'TERMS.TERMINATION_CONTENT_2' | translate }}</p>
+      </section>
 
-      <!-- Limitation of Liability -->
-      <h1 class="mt-5">Limitation of Liability</h1>
-      <p>Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited...</p>
+      <!-- Limitation of Liability Section -->
+      <section aria-labelledby="limitation-title" class="mb-5">
+        <h4 id="limitation-title">{{ 'TERMS.LIMITATION_OF_LIABILITY_TITLE' | translate }}</h4>
+        <p>{{ 'TERMS.LIMITATION_CONTENT_1' | translate }}</p>
+        <p>{{ 'TERMS.LIMITATION_CONTENT_2' | translate }}</p>
+        <p>{{ 'TERMS.LIMITATION_CONTENT_3' | translate }}</p>
+      </section>
 
-      <!-- "AS IS" and "AS AVAILABLE" Disclaimer -->
-      <h1 class="mt-5">"AS IS" and "AS AVAILABLE" Disclaimer</h1>
-      <p>The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind...</p>
+      <!-- Disclaimer Section -->
+      <section aria-labelledby="disclaimer-title" class="mb-5">
+        <h4 id="disclaimer-title">{{ 'TERMS.DISCLAIMER_TITLE' | translate }}</h4>
+        <p>{{ 'TERMS.DISCLAIMER_CONTENT_1' | translate }}</p>
+        <p>{{ 'TERMS.DISCLAIMER_CONTENT_2' | translate }}</p>
+      </section>
 
-      <!-- Governing Law -->
-      <h1 class="mt-5">Governing Law</h1>
-      <p>The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service...</p>
+      <!-- Governing Law Section -->
+      <section aria-labelledby="governing-title" class="mb-5">
+        <h4 id="governing-title">{{ 'TERMS.GOVERNING_LAW_TITLE' | translate }}</h4>
+        <p>{{ 'TERMS.GOVERNING_LAW_CONTENT' | translate }}</p>
+      </section>
 
-      <!-- Disputes Resolution -->
-      <h1 class="mt-5">Disputes Resolution</h1>
-      <p>If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company...</p>
+      <!-- Disputes Resolution Section -->
+      <section aria-labelledby="disputes-title" class="mb-5">
+        <h4 id="disputes-title">{{ 'TERMS.DISPUTES_RESOLUTION_TITLE' | translate }}</h4>
+        <p>{{ 'TERMS.DISPUTES_RESOLUTION_CONTENT' | translate }}</p>
+      </section>
 
-      <!-- For European Union (EU) Users -->
-      <h1 class="mt-5">For European Union (EU) Users</h1>
-      <p>If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which you are resident in...</p>
+      <!-- EU Users Section -->
+      <section aria-labelledby="eu-title" class="mb-5">
+        <h4 id="eu-title">{{ 'TERMS.EU_USERS_TITLE' | translate }}</h4>
+        <p>{{ 'TERMS.EU_USERS_CONTENT' | translate }}</p>
+      </section>
 
-      <!-- United States Legal Compliance -->
-      <h1 class="mt-5">United States Legal Compliance</h1>
-      <p>You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a "terrorist supporting" country...</p>
+      <!-- US Compliance Section -->
+      <section aria-labelledby="us-title" class="mb-5">
+        <h4 id="us-title">{{ 'TERMS.US_COMPLIANCE_TITLE' | translate }}</h4>
+        <p>{{ 'TERMS.US_COMPLIANCE_CONTENT' | translate }}</p>
+      </section>
 
-      <!-- Severability and Waiver -->
-      <h1 class="mt-5">Severability and Waiver</h1>
-      <h2>Severability</h2>
-      <p>If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law...</p>
-      <h2>Waiver</h2>
-      <p>Except as provided herein, the failure to exercise a right or to require performance of an obligation under these Terms shall not effect a party's ability to exercise such right or require such performance at any time thereafter...</p>
+      <!-- Severability and Waiver Section -->
+      <section aria-labelledby="severability-title" class="mb-5">
+        <h4 id="severability-title">{{ 'TERMS.SEVERABILITY_WAIVER_TITLE' | translate }}</h4>
 
-      <!-- Translation Interpretation -->
-      <h1 class="mt-5">Translation Interpretation</h1>
-      <p>These Terms and Conditions may have been translated if We have made them available to You on our Service. You agree that the original English text shall prevail in the case of a dispute.</p>
+        <!-- Severability Sub-section -->
+        <h5 class=" mt-3">{{ 'TERMS.SEVERABILITY_TITLE' | translate }}</h5>
+        <p>{{ 'TERMS.SEVERABILITY_CONTENT' | translate }}</p>
 
-      <!-- Changes to These Terms and Conditions -->
-      <h1 class="mt-5">Changes to These Terms and Conditions</h1>
-      <p>We reserve the right, at Our sole discretion, to modify or replace these Terms at any time...</p>
+        <!-- Waiver Sub-section -->
+        <h5 class=" mt-3">{{ 'TERMS.WAIVER_TITLE' | translate }}</h5>
+        <p>{{ 'TERMS.WAIVER_CONTENT' | translate }}</p>
+      </section>
 
-      <!-- Contact Us -->
-      <h1 class="mt-5">Contact Us</h1>
-      <ul>
-        <li><p>By visiting this page on our website: <a href="vanishingpoint.dev/contact" rel="external nofollow noopener" target="_parent">vanishingpoint.dev/contact</a></p></li>
-      </ul>
+      <!-- Translation Section -->
+      <section aria-labelledby="translation-title" class="mb-5">
+        <h4 id="translation-title">{{ 'TERMS.TRANSLATION_TITLE' | translate }}</h4>
+        <p>{{ 'TERMS.TRANSLATION_CONTENT' | translate }}</p>
+      </section>
+
+      <!-- Changes to These Terms and Conditions Section -->
+      <section aria-labelledby="changes-title" class="mb-5">
+        <h4 id="changes-title">{{ 'TERMS.CHANGES_TITLE' | translate }}</h4>
+        <p>{{ 'TERMS.CHANGES_CONTENT_1' | translate }}</p>
+        <!-- ... add other paragraphs similarly ... -->
+      </section>
+
+      <app-contact-section></app-contact-section>
+      
     </div>
   </div>
 </div>
