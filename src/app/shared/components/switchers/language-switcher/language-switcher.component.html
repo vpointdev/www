@@ -1,8 +1,9 @@
 <!-- Language switcher button -->
-<button class="btn text-white py-2 px-0 px-lg-2" type="button" (click)="toggleLanguage()" [@buttonClick]="buttonState"
+<button class="btn text-white py-2 px-lg-2" type="button" (click)="toggleLanguage()" [@buttonClick]="buttonState"
   aria-label="Toggle language" role="button">
 
   <!-- Language icon based on current language -->
   <img [ngSrc]="currentLanguageIconSrc" [width]="iconWidth" [height]="iconHeight"
     alt="Icon representing the current language. Click to toggle." class="rounded" role="img">
+    <small class="d-lg-none ms-2">Language</small>
 </button>

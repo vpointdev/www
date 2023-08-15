@@ -23,7 +23,6 @@ import { HeaderComponent } from './shared/components/headers/header.component';
 import { FooterComponent } from './shared/components/footers/footer.component';
 import { ThemeSwitcherComponent } from './shared/components/switchers/theme-switcher/theme-switcher.component';
 import { MarketingCarrouselComponent } from './shared/components/carrousels/marketing-carrousel/marketing-carrousel.component';
-import { NavbarMenuOptionsComponent } from './shared/components/navbars/navbar-menu-options/navbar-menu-options.component';
 import { LanguageSwitcherComponent } from './shared/components/switchers/language-switcher/language-switcher.component';
 import { PrivacyPolicyComponent } from './layout/components/privacy-policy/privacy-policy.component';
 import { NotFoundComponent } from './layout/components/not-found/not-found.component';
@@ -42,7 +41,6 @@ import { ContactSectionComponent } from './shared/components/sections/contact-se
     FooterComponent,
     ThemeSwitcherComponent,
     MarketingCarrouselComponent,
-    NavbarMenuOptionsComponent,
     LanguageSwitcherComponent,
     PrivacyPolicyComponent,
     NotFoundComponent,

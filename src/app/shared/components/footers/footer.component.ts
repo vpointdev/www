@@ -17,7 +17,7 @@ export class FooterComponent  implements OnInit, OnDestroy{
 
   ngOnInit(): void {
     this.checkTheme();
-    this.themeChangeSubscription = this.themeService.themeChanged.subscribe((theme: string) => {
+    this.themeChangeSubscription = this.themeService.themeChangedEvent.subscribe((theme: string) => {
       this.isDarkTheme = theme === 'dark';
     });
   }

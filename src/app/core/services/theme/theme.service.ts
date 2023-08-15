@@ -1,11 +1,29 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { EventEmitter, Injectable, OnDestroy } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ThemeService {
+export class ThemeService implements OnDestroy {
   private readonly localStorageKey = 'theme';
-  themeChanged = new EventEmitter<string>();
+  themeChangedEvent = new EventEmitter<string>();
+  private mediaMatcher = window.matchMedia('(prefers-color-scheme: dark)');
+
+  constructor() {
+    // Listen for changes in the user's system theme preference
+    this.mediaMatcher.addEventListener('change', this.systemThemeChanged.bind(this));
+  }
+
+  /**
+   * Handle a change in the user's system theme preference.
+   * If the user's theme preference is 'auto', then the theme is set to 'dark' or 'light' based on the system theme.
+   * @param event The media query list event.
+   */
+  private systemThemeChanged(event: MediaQueryListEvent): void {
+    const newTheme = event.matches ? 'dark' : 'light';
+    this.setStoredTheme(newTheme);
+    this.setTheme(newTheme);
+    this.themeChangedEvent.emit(newTheme);
+  }
 
 
   /**
@@ -49,4 +67,12 @@ export class ThemeService {
       document.documentElement.setAttribute('data-bs-theme', theme);
     }
   }
+
+  /**
+   * 
+   */
+  ngOnDestroy(): void {
+    this.mediaMatcher.removeEventListener('change', this.systemThemeChanged.bind(this));
+  }
+  
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { faGithub, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { ThemeService } from 'src/app/core/services/theme/theme.service';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +13,7 @@ export class HeaderComponent {
   faGithub = faGithub;
   faTwitter = faTwitter;
   faYouTube = faYoutube;
+  faBars = faBars;
 
   constructor(private themeService: ThemeService) {}
 
@@ -33,4 +35,9 @@ export class HeaderComponent {
     this.themeService.setStoredTheme(newTheme);
     this.themeService.setTheme(newTheme);
   }
+
+  openPage(page: string) {
+    window.open(page, '_blank');
+  }
+  
 }
